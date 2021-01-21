@@ -35,39 +35,51 @@ const restaurant = {
   },
 };
 
-// Spread Operator
-const arr = [7,8,9];
-const newArr = [1, 2, ...arr];
-console.log(newArr);
-console.log(...newArr);
+// Rest Pattern
+// Rest syntax is on the left side of operator
+// Spread is on the right side of operator
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
 
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
-
-// Spread operator use cases
-
-// Copy array
-const mainMenuCopy = [...restaurant.mainMenu]
-
-// merge arrays
-const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(menu);
-
-// Iterables: Arrays, strings, maps, sets. NOT objects
-const str = 'Josh';
-const letters = [...str, ' ', 'J.'];
-console.log(letters);
-
-// const ingredients = [prompt('Ingredient 1:'), prompt('Ingredient 2:'), prompt('Ingredient 3:')];
-// restaurant.orderPasta(...ingredients);
+const [pizza, , risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(pizza, risotto, otherFood);
 
 // Objects
-const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
-console.log(newRestaurant);
+const 
 
-const restaurantCopy = { ...restaurant };
-restaurantCopy.name = 'Ristorante Roma';
-console.log(restaurantCopy);
+// Spread Operator
+// const arr = [7,8,9];
+// const newArr = [1, 2, ...arr];
+// console.log(newArr);
+// console.log(...newArr);
+//
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu);
+//
+// // Spread operator use cases
+//
+// // Copy array
+// const mainMenuCopy = [...restaurant.mainMenu]
+//
+// // merge arrays
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(menu);
+//
+// // Iterables: Arrays, strings, maps, sets. NOT objects
+// const str = 'Josh';
+// const letters = [...str, ' ', 'J.'];
+// console.log(letters);
+//
+// // const ingredients = [prompt('Ingredient 1:'), prompt('Ingredient 2:'), prompt('Ingredient 3:')];
+// // restaurant.orderPasta(...ingredients);
+//
+// // Objects
+// const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+// console.log(newRestaurant);
+//
+// const restaurantCopy = { ...restaurant };
+// restaurantCopy.name = 'Ristorante Roma';
+// console.log(restaurantCopy);
 
 // restaurant.orderDelivery({
 //   time: "22:30",
