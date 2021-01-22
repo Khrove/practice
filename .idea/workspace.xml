@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="997725a0-042d-475a-9763-1529de9719c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/09-Data-Structures-Operators/starter/soccer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/09-Data-Structures-Operators/starter/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/09-Data-Structures-Operators/starter/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/09-Data-Structures-Operators/starter/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/09-Data-Structures-Operators/starter/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,11 +45,24 @@
       <option name="presentableId" value="Default" />
       <updated>1611272259561</updated>
       <workItem from="1611272265127" duration="313000" />
-      <workItem from="1611272606263" duration="2880000" />
+      <workItem from="1611272606263" duration="3631000" />
+      <workItem from="1611354647961" duration="448000" />
+      <workItem from="1611357594975" duration="2020000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
