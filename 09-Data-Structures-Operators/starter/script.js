@@ -19,6 +19,11 @@ const restaurant = {
     console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}.`);
   },
 
+  orderPizza: function(mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -35,17 +40,61 @@ const restaurant = {
   },
 };
 
+// For of loop (lecture 110)
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for(const item of menu) {
+  console.log(item);
+}
+
+// To get index of for of loop
+for (const item of menu.entries()) {
+  console.log(item);
+}
+
+// Nullish Coalescing operator
+
+// restaurant.numGuests = 0;
+// const guests = restaurant.numGuests || 10;
+// console.log(guests);
+//
+// // Nullish: null and undefined (not 0 or '')
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
+
 // Rest Pattern
 // Rest syntax is on the left side of operator
 // Spread is on the right side of operator
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others);
-
-const [pizza, , risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(pizza, risotto, otherFood);
-
-// Objects
-const 
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
+//
+// const [pizza, , risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(pizza, risotto, otherFood);
+//
+// // Objects
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(weekdays);
+//
+// // Functions
+// const add = function(...numbers) {
+//   let solution = 0;
+//   for(let i = 0; i < numbers.length; i++) {
+//     solution += numbers[i];
+//   }
+//
+//   return console.log(solution);
+// }
+//
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
+//
+// const x = [23, 5, 7];
+// add(...x);
+//
+// restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+// restaurant.orderPizza('mushrooms');
 
 // Spread Operator
 // const arr = [7,8,9];
