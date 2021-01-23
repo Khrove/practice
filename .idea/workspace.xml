@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="997725a0-042d-475a-9763-1529de9719c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/09-Data-Structures-Operators/starter/challenge_2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/09-Data-Structures-Operators/starter/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/09-Data-Structures-Operators/starter/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/09-Data-Structures-Operators/starter/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/09-Data-Structures-Operators/starter/script.js" afterDir="false" />
@@ -22,7 +23,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nOs1Z3296PYGJFLbreJQejaEXW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,7 +49,7 @@
       <workItem from="1611272265127" duration="313000" />
       <workItem from="1611272606263" duration="3631000" />
       <workItem from="1611354647961" duration="448000" />
-      <workItem from="1611357594975" duration="3819000" />
+      <workItem from="1611357594975" duration="6956000" />
     </task>
     <servers />
   </component>
