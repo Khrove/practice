@@ -44,6 +44,38 @@ const restaurant = {
   },
 };
 
+// Sets
+// Collection of unique values; can be mixed data types; removes ALL duplicates
+// There are no Indexes in a set; Looping is possible though. See for of loop below
+
+const orderSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
+console.log(orderSet);
+
+console.log(new Set('Jonas'));
+
+console.log(orderSet.size);
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('risotto'));
+console.log(orderSet.has('Bread'));
+
+orderSet.add('Garlic Bread');
+orderSet.delete('Risotto');
+
+console.log(orderSet);
+
+for(const order of orderSet) console.log(order);
+
+orderSet.clear();
+console.log(orderSet);
+
+// Example of Set
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter', 'Busboy', 'Hostess'];
+// To create a new unique array you use the spread operator
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+console.log(new Set('Joshua Johnson').size);
+
 // Looping Objects
 
 // Looping over object property names (keys)
