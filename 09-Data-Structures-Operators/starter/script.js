@@ -44,30 +44,68 @@ const restaurant = {
   },
 };
 
+// Maps: Iteration
+const question = new Map([
+    ['question', 'What is the best programming language in the world?'],
+    [1, 'C'],
+    [2, 'Java'],
+    [3, 'JavaScript'],
+    ['correct', 3],
+    [true, 'Congrats you got the correct answer!'],
+    [false, 'Oof, sorry! You got the wrong answer.']
+]);
+
+console.log(question);
+
+// Convert object to map
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+
+// Quiz app
+console.log(question.get('question'));
+for(const [key, value] of question) {
+  if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+const answer = Number(prompt('Your answer?'));
+console.log(answer);
+
+console.log(question.get(question.get('correct') === answer));
+
+// Convert map to array
+console.log([...question]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
+
 // Maps
 // Key value pairs where keys can have any type (in objects they're always strings)
 
-const rest = new Map();
-rest.set('name', 'Classic Italiano');
-rest.set(1, 'Firenze, Italy');
-console.log(rest.set(2, 'Listbon, Portugal'));
-
-rest.set('Categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']).set('open', 11).set('close', 23).set(true, 'We are open').set(false, 'We are closed.');
-
-console.log(rest);
-
-console.log(rest.get('name'));
-console.log(rest.get(true));
-
-const time = 21;
-console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
-
-console.log(rest.has('Categories'));
-rest.delete(2);
-console.log(rest);
-console.log(rest.size);
-rest.clear();
-console.log(rest.size);
+// const rest = new Map();
+// rest.set('name', 'Classic Italiano');
+// rest.set(1, 'Firenze, Italy');
+// console.log(rest.set(2, 'Listbon, Portugal'));
+//
+// rest.set('Categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']).set('open', 11).set('close', 23).set(true, 'We are open').set(false, 'We are closed.');
+//
+// console.log(rest);
+//
+// console.log(rest.get('name'));
+// console.log(rest.get(true));
+//
+// const time = 21;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+//
+// console.log(rest.has('Categories'));
+// rest.delete(2);
+// console.log(rest);
+// console.log(rest.size);
+// // rest.clear();
+// console.log(rest.size);
+//
+// const arr = [1, 2];
+// rest.set(arr, "test");
+// rest.set(document.querySelector('h1'), 'Heading');
+// console.log(rest.get(arr));
 
 
 // Sets
