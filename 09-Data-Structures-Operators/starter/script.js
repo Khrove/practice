@@ -44,37 +44,63 @@ const restaurant = {
   },
 };
 
+// Maps
+// Key value pairs where keys can have any type (in objects they're always strings)
+
+const rest = new Map();
+rest.set('name', 'Classic Italiano');
+rest.set(1, 'Firenze, Italy');
+console.log(rest.set(2, 'Listbon, Portugal'));
+
+rest.set('Categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']).set('open', 11).set('close', 23).set(true, 'We are open').set(false, 'We are closed.');
+
+console.log(rest);
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
+
+const time = 21;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('Categories'));
+rest.delete(2);
+console.log(rest);
+console.log(rest.size);
+rest.clear();
+console.log(rest.size);
+
+
 // Sets
 // Collection of unique values; can be mixed data types; removes ALL duplicates
 // There are no Indexes in a set; Looping is possible though. See for of loop below
 
-const orderSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
-console.log(orderSet);
-
-console.log(new Set('Jonas'));
-
-console.log(orderSet.size);
-console.log(orderSet.has('Pizza'));
-console.log(orderSet.has('risotto'));
-console.log(orderSet.has('Bread'));
-
-orderSet.add('Garlic Bread');
-orderSet.delete('Risotto');
-
-console.log(orderSet);
-
-for(const order of orderSet) console.log(order);
-
-orderSet.clear();
-console.log(orderSet);
-
-// Example of Set
-const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter', 'Busboy', 'Hostess'];
-// To create a new unique array you use the spread operator
-const staffUnique = [...new Set(staff)];
-console.log(staffUnique);
-
-console.log(new Set('Joshua Johnson').size);
+// const orderSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
+// console.log(orderSet);
+//
+// console.log(new Set('Jonas'));
+//
+// console.log(orderSet.size);
+// console.log(orderSet.has('Pizza'));
+// console.log(orderSet.has('risotto'));
+// console.log(orderSet.has('Bread'));
+//
+// orderSet.add('Garlic Bread');
+// orderSet.delete('Risotto');
+//
+// console.log(orderSet);
+//
+// for(const order of orderSet) console.log(order);
+//
+// orderSet.clear();
+// console.log(orderSet);
+//
+// // Example of Set
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter', 'Busboy', 'Hostess'];
+// // To create a new unique array you use the spread operator
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
+//
+// console.log(new Set('Joshua Johnson').size);
 
 // Looping Objects
 
