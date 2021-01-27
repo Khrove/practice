@@ -48,41 +48,86 @@ const restaurant = {
 const airline = 'TAP Air Portugal';
 const plane = 'A320';
 
+// Fix capitalization in name
+const passenger = 'jOnAS';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
 
-// Only the first occurrence
-console.log(airline.indexOf('r'));
-// Last occurrence of
-console.log(airline.lastIndexOf('r'));
-// Case sensitive, gives you starting position of word
-console.log(airline.indexOf('Portugal'));
-// Cuts starting to end (first param is start so in this example 0 - 3), second is ending
-console.log(airline.slice(4));
-// starts at position 3, cuts to 6 (prints Air ) -- including the space
-console.log(airline.slice(4, 7));
+// Check email
+const email = 'hello@jonas.io';
+const loginEmail = '   Hello@Jonas.Io \n';
 
-console.log(airline.slice(0, airline.indexOf(' ')));
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
 
-// We add the plus 1 here to cut the space out of the print
-console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+// replacing parts of strings
+const priceGB = '288,98';
+const priceUS = priceGB.replace(',', '.');
 
-// Starts at the ending of the word. In the case "al" in Portugal
-console.log(airline.slice(-2));
-// Cuts of beginning and end of string
-console.log(airline.slice(1, -1));
+console.log(priceUS);
 
-const checkMiddleSeat = function(seat) {
-  // B and E are middle seats
-  const letter = seat.slice(-1);
-  if(letter === 'B' || letter === 'E') {
-    console.log('You got a middle seat!');
+const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
+console.log(announcement.replace('door', 'gate'));
+// This will replace all occurrences of door, not just the first
+console.log(announcement.replace(/door/g, 'gate'));
+
+// Booleans
+const plane2 = 'Airbus A320neo';
+console.log(plane2.includes('A320'));
+console.log(plane2.includes('Boeing'));
+console.log(plane2.startsWith('Air'));
+
+if(plane2.startsWith('Airbus') && plane2.endsWith('neo')) console.log('This a new plane!');
+
+// Practice exercise
+const checkBaggage = function(items) {
+  const baggage = items.toLowerCase();
+  if(baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are not allowed on the plane.');
   } else {
-    console.log('You got lucky punk!');
+    console.log('Welcome aboard matey!');
   }
 }
 
-checkMiddleSeat('11B');
-checkMiddleSeat('23C');
-checkMiddleSeat('3E');
+checkBaggage('I have a laptop, some food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and a gun for protection!');
+
+// // Only the first occurrence
+// console.log(airline.indexOf('r'));
+// // Last occurrence of
+// console.log(airline.lastIndexOf('r'));
+// // Case sensitive, gives you starting position of word
+// console.log(airline.indexOf('Portugal'));
+// // Cuts starting to end (first param is start so in this example 0 - 3), second is ending
+// console.log(airline.slice(4));
+// // starts at position 3, cuts to 6 (prints Air ) -- including the space
+// console.log(airline.slice(4, 7));
+//
+// console.log(airline.slice(0, airline.indexOf(' ')));
+//
+// // We add the plus 1 here to cut the space out of the print
+// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+//
+// // Starts at the ending of the word. In the case "al" in Portugal
+// console.log(airline.slice(-2));
+// // Cuts of beginning and end of string
+// console.log(airline.slice(1, -1));
+//
+// const checkMiddleSeat = function(seat) {
+//   // B and E are middle seats
+//   const letter = seat.slice(-1);
+//   if(letter === 'B' || letter === 'E') {
+//     console.log('You got a middle seat!');
+//   } else {
+//     console.log('You got lucky punk!');
+//   }
+// }
+//
+// checkMiddleSeat('11B');
+// checkMiddleSeat('23C');
+// checkMiddleSeat('3E');
 
 // Maps: Iteration
 // const question = new Map([
