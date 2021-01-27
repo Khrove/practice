@@ -44,6 +44,45 @@ const restaurant = {
   },
 };
 
+// Working with Strings
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+
+// Only the first occurrence
+console.log(airline.indexOf('r'));
+// Last occurrence of
+console.log(airline.lastIndexOf('r'));
+// Case sensitive, gives you starting position of word
+console.log(airline.indexOf('Portugal'));
+// Cuts starting to end (first param is start so in this example 0 - 3), second is ending
+console.log(airline.slice(4));
+// starts at position 3, cuts to 6 (prints Air ) -- including the space
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+
+// We add the plus 1 here to cut the space out of the print
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+// Starts at the ending of the word. In the case "al" in Portugal
+console.log(airline.slice(-2));
+// Cuts of beginning and end of string
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function(seat) {
+  // B and E are middle seats
+  const letter = seat.slice(-1);
+  if(letter === 'B' || letter === 'E') {
+    console.log('You got a middle seat!');
+  } else {
+    console.log('You got lucky punk!');
+  }
+}
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
 
 // Maps: Iteration
 // const question = new Map([
