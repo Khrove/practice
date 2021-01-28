@@ -44,55 +44,103 @@ const restaurant = {
   },
 };
 
-// Working with Strings
-const airline = 'TAP Air Portugal';
-const plane = 'A320';
+console.log('a+very+nice+string'.split('+'));
+console.log('Joshua Johnson'.split(' '));
 
-// Fix capitalization in name
-const passenger = 'jOnAS';
-const passengerLower = passenger.toLowerCase();
-const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
-console.log(passengerCorrect);
+const [firstname, lastname] = 'Joshua Johnson'.split(' ');
+console.log(firstname, lastname);
 
-// Check email
-const email = 'hello@jonas.io';
-const loginEmail = '   Hello@Jonas.Io \n';
+const newName = ['Mr.', firstname, lastname.toUpperCase()].join(' ');
+console.log(newName);
 
-const normalizedEmail = loginEmail.toLowerCase().trim();
-console.log(normalizedEmail);
-
-// replacing parts of strings
-const priceGB = '288,98';
-const priceUS = priceGB.replace(',', '.');
-
-console.log(priceUS);
-
-const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
-console.log(announcement.replace('door', 'gate'));
-// This will replace all occurrences of door, not just the first
-console.log(announcement.replace(/door/g, 'gate'));
-
-// Booleans
-const plane2 = 'Airbus A320neo';
-console.log(plane2.includes('A320'));
-console.log(plane2.includes('Boeing'));
-console.log(plane2.startsWith('Air'));
-
-if(plane2.startsWith('Airbus') && plane2.endsWith('neo')) console.log('This a new plane!');
-
-// Practice exercise
-const checkBaggage = function(items) {
-  const baggage = items.toLowerCase();
-  if(baggage.includes('knife') || baggage.includes('gun')) {
-    console.log('You are not allowed on the plane.');
-  } else {
-    console.log('Welcome aboard matey!');
+const capitalizeName = function(name) {
+  const newArr = [];
+  const names = name.split(' ');
+  for (const n of names) {
+    newArr.push(n[0].toUpperCase() + n.slice(1));
+    // newArr.push(n.replace(n[0],n[0].toUpperCase()));
   }
+  console.log(newArr.join(' '));
 }
 
-checkBaggage('I have a laptop, some food and a pocket Knife');
-checkBaggage('Socks and camera');
-checkBaggage('Got some snacks and a gun for protection!');
+capitalizeName('jessica ann smith davis');
+capitalizeName('joshua johnson');
+
+// Padding
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+').padEnd(35, '+'));
+console.log('Joshua'.padStart(25, '+'));
+
+// Real world example. Using padding a credit card masking
+const mask = function(num) {
+  const str = num + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+}
+
+console.log(mask(64123454));
+console.log(mask(4111111111111111));
+console.log(mask(1234567890111111));
+
+// Repeat
+const message2 = 'Bad weather... All Departures Delayed... ';
+console.log(message2.repeat(5));
+
+const planesInLine = function(n) {
+  console.log(`There are ${n} planes in line ${'🛩'.repeat(n)}`);
+}
+
+planesInLine(5);
+
+// Working with Strings
+// const airline = 'TAP Air Portugal';
+// const plane = 'A320';
+//
+// // Fix capitalization in name
+// const passenger = 'jOnAS';
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
+//
+// // Check email
+// const email = 'hello@jonas.io';
+// const loginEmail = '   Hello@Jonas.Io \n';
+//
+// const normalizedEmail = loginEmail.toLowerCase().trim();
+// console.log(normalizedEmail);
+//
+// // replacing parts of strings
+// const priceGB = '288,98';
+// const priceUS = priceGB.replace(',', '.');
+//
+// console.log(priceUS);
+//
+// const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
+// console.log(announcement.replace('door', 'gate'));
+// // This will replace all occurrences of door, not just the first
+// console.log(announcement.replace(/door/g, 'gate'));
+//
+// // Booleans
+// const plane2 = 'Airbus A320neo';
+// console.log(plane2.includes('A320'));
+// console.log(plane2.includes('Boeing'));
+// console.log(plane2.startsWith('Air'));
+//
+// if(plane2.startsWith('Airbus') && plane2.endsWith('neo')) console.log('This a new plane!');
+//
+// // Practice exercise
+// const checkBaggage = function(items) {
+//   const baggage = items.toLowerCase();
+//   if(baggage.includes('knife') || baggage.includes('gun')) {
+//     console.log('You are not allowed on the plane.');
+//   } else {
+//     console.log('Welcome aboard matey!');
+//   }
+// }
+//
+// checkBaggage('I have a laptop, some food and a pocket Knife');
+// checkBaggage('Socks and camera');
+// checkBaggage('Got some snacks and a gun for protection!');
 
 // // Only the first occurrence
 // console.log(airline.indexOf('r'));
