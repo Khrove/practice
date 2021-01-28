@@ -44,53 +44,53 @@ const restaurant = {
   },
 };
 
-console.log('a+very+nice+string'.split('+'));
-console.log('Joshua Johnson'.split(' '));
-
-const [firstname, lastname] = 'Joshua Johnson'.split(' ');
-console.log(firstname, lastname);
-
-const newName = ['Mr.', firstname, lastname.toUpperCase()].join(' ');
-console.log(newName);
-
-const capitalizeName = function(name) {
-  const newArr = [];
-  const names = name.split(' ');
-  for (const n of names) {
-    newArr.push(n[0].toUpperCase() + n.slice(1));
-    // newArr.push(n.replace(n[0],n[0].toUpperCase()));
-  }
-  console.log(newArr.join(' '));
-}
-
-capitalizeName('jessica ann smith davis');
-capitalizeName('joshua johnson');
-
-// Padding
-const message = 'Go to gate 23!';
-console.log(message.padStart(25, '+').padEnd(35, '+'));
-console.log('Joshua'.padStart(25, '+'));
-
-// Real world example. Using padding a credit card masking
-const mask = function(num) {
-  const str = num + '';
-  const last = str.slice(-4);
-  return last.padStart(str.length, '*');
-}
-
-console.log(mask(64123454));
-console.log(mask(4111111111111111));
-console.log(mask(1234567890111111));
-
-// Repeat
-const message2 = 'Bad weather... All Departures Delayed... ';
-console.log(message2.repeat(5));
-
-const planesInLine = function(n) {
-  console.log(`There are ${n} planes in line ${'🛩'.repeat(n)}`);
-}
-
-planesInLine(5);
+// console.log('a+very+nice+string'.split('+'));
+// console.log('Joshua Johnson'.split(' '));
+//
+// const [firstname, lastname] = 'Joshua Johnson'.split(' ');
+// console.log(firstname, lastname);
+//
+// const newName = ['Mr.', firstname, lastname.toUpperCase()].join(' ');
+// console.log(newName);
+//
+// const capitalizeName = function(name) {
+//   const newArr = [];
+//   const names = name.split(' ');
+//   for (const n of names) {
+//     newArr.push(n[0].toUpperCase() + n.slice(1));
+//     // newArr.push(n.replace(n[0],n[0].toUpperCase()));
+//   }
+//   console.log(newArr.join(' '));
+// }
+//
+// capitalizeName('jessica ann smith davis');
+// capitalizeName('joshua johnson');
+//
+// // Padding
+// const message = 'Go to gate 23!';
+// console.log(message.padStart(25, '+').padEnd(35, '+'));
+// console.log('Joshua'.padStart(25, '+'));
+//
+// // Real world example. Using padding a credit card masking
+// const mask = function(num) {
+//   const str = num + '';
+//   const last = str.slice(-4);
+//   return last.padStart(str.length, '*');
+// }
+//
+// console.log(mask(64123454));
+// console.log(mask(4111111111111111));
+// console.log(mask(1234567890111111));
+//
+// // Repeat
+// const message2 = 'Bad weather... All Departures Delayed... ';
+// console.log(message2.repeat(5));
+//
+// const planesInLine = function(n) {
+//   console.log(`There are ${n} planes in line ${'🛩'.repeat(n)}`);
+// }
+//
+// planesInLine(5);
 
 // Working with Strings
 // const airline = 'TAP Air Portugal';
