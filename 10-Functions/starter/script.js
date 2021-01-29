@@ -18,23 +18,25 @@
 // createBooking('BH3433', 2);
 
 // Passing objects: Value vs reference
-const flight = 'LH234';
-const jonas = {
-    name: "Joshua Johnson",
-    passport: 23456789
-};
+// const flight = 'LH234';
+// const jonas = {
+//     name: "Joshua Johnson",
+//     passport: 23456789
+// };
+//
+// const checkIn = function(flightNum, passenger) {
+//     flightNum = 'LH999';
+//     passenger.name = 'Mr. ' + passenger.name;
+//
+//     if(passenger.passport === 23456789) {
+//         alert('Check in');
+//     } else {
+//         alert('Wrong passport!');
+//     }
+// }
+//
+// checkIn(flight, jonas);
+// console.log(flight);
+// console.log(jonas);
 
-const checkIn = function(flightNum, passenger) {
-    flightNum = 'LH999';
-    passenger.name = 'Mr. ' + passenger.name;
-
-    if(passenger.passport === 23456789) {
-        alert('Check in');
-    } else {
-        alert('Wrong passport!');
-    }
-}
-
-checkIn(flight, jonas);
-console.log(flight);
-console.log(jonas);
+// First class and Higher order functions
