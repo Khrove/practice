@@ -67,6 +67,7 @@
 //
 // document.body.addEventListener('click', highfive);
 
+// Functions returning functions
 const greet = function(greeting) {
     return function(name) {
         console.log(`${greeting} ${name}`);
@@ -76,3 +77,10 @@ const greet = function(greeting) {
 const greeterHey = greet('Hey');
 greeterHey('Jonas');
 greeterHey('Steven');
+
+greet('Hello')('Kevin');
+
+// Arrow function challenge
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArr('Hi')('Jonas');
