@@ -123,9 +123,43 @@ const swiss = {
 book.call(swiss, 583, 'Mary Cooper');
 console.log(swiss);
 
-// Apply method -- needs an array
+ // Apply method -- needs an array
 const flightData = [583, 'George Cooper'];
 book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData);
+
+// Bind method
+const bookEW = book.bind(eurowings);
+bookEW(23, 'Joshua Jimbonson');
+
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23('Joshua Testonson');
+
+// With Even Listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function() {
+    console.log(this);
+    this.planes++;
+    console.log(this.planes);
+}
+
+document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+// Partial Application -- preset params
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23);
+console.log(addVAT(100));
+console.log(addVAT(1000));
+
+const addTaxRate = function(rate) {
+    return function(value) {
+        return value + value * rate;
+    }
+}
+
+const addVAT2 = addTaxRate(0.23);
+console.log(addVAT2(100));
