@@ -165,14 +165,14 @@
 // console.log(addVAT2(100));
 
 // Immediately invoked function expressions (IIFE)
-const runOnce = function() {
-    console.log('This will never run again!');
-}
-
-// runOnce();
-
-(function() {
-   console.log('This will never run again!');
-})();
-
-(() => console.log('This will also never run again!'))();
+// const runOnce = function() {
+//     console.log('This will never run again!');
+// }
+//
+// // runOnce();
+//
+// (function() {
+//    console.log('This will never run again!');
+// })();
+//
+// (() => console.log('This will also never run again!'))();
