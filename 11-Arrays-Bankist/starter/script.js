@@ -78,6 +78,13 @@ const displayMovements = function(movements) {
 }
 displayMovements(account1.movements);
 
+const createUsernames = function(accs) {
+    accs.forEach(function(acc) {
+        acc.username = acc.owner.toLowerCase().split(' ').map((name) => name[0]).join('');
+    });
+}
+createUsernames(accounts);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -145,18 +152,18 @@ displayMovements(account1.movements);
 
 // The map array method
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-
-const eurToUsd = 1.1;
-
-const newArr = movements.map(function(move) {
-    return move * eurToUsd;
-});
-
-console.log(newArr);
-
-const movementsDesc = movements.map((move, index, arr) => {
-    return `Movement ${index + 1}: You ${move > 0 ? 'deposited' : 'withdrew'} ${Math.abs(move)}`
-});
-
-console.log(movementsDesc);
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//
+// const eurToUsd = 1.1;
+//
+// const newArr = movements.map(function(move) {
+//     return move * eurToUsd;
+// });
+//
+// console.log(newArr);
+//
+// const movementsDesc = movements.map((move, index, arr) => {
+//     return `Movement ${index + 1}: You ${move > 0 ? 'deposited' : 'withdrew'} ${Math.abs(move)}`
+// });
+//
+// console.log(movementsDesc);
