@@ -156,11 +156,7 @@ const newArr = movements.map(function(move) {
 console.log(newArr);
 
 const movementsDesc = movements.map((move, index, arr) => {
-    if(move > 0) {
-    return `Movement ${index + 1}: You deposited ${move}`;
-  } else {
-    return `Movement ${index + 1}: You withdrew ${Math.abs(move)}`;
-  }
+    return `Movement ${index + 1}: You ${move > 0 ? 'deposited' : 'withdrew'} ${Math.abs(move)}`
 });
 
 console.log(movementsDesc);
