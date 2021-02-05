@@ -142,3 +142,25 @@ displayMovements(account1.movements);
 //
 // // JOIN
 // console.log(letters.join(' - '));
+
+// The map array method
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const eurToUsd = 1.1;
+
+const newArr = movements.map(function(move) {
+    return move * eurToUsd;
+});
+
+console.log(newArr);
+
+const movementsDesc = movements.map((move, index, arr) => {
+    if(move > 0) {
+    return `Movement ${index + 1}: You deposited ${move}`;
+  } else {
+    return `Movement ${index + 1}: You withdrew ${Math.abs(move)}`;
+  }
+});
+
+console.log(movementsDesc);
