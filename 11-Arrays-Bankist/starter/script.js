@@ -84,6 +84,27 @@ const calcDisplayBalance = movements => {
 }
 calcDisplayBalance(account1.movements);
 
+const calcDisplaySummary = function(movements) {
+    const incomes = movements
+        .filter(mov => mov > 0)
+        .reduce((acc, mov) => acc + mov, 0);
+    const withdrawals = movements
+        .filter(mov => mov < 0)
+        .reduce((acc, mov) => acc + mov, 0);
+    const interest = movements
+        .filter(mov => mov > 0)
+        .map(mov => mov * 1.2/100)
+        .filter((interest, i, arr) => {
+            console.log(arr);
+            return interest >= 1;
+        })
+        .reduce((acc, mov) => acc + mov, 0);
+    labelSumInterest.textContent = `$${interest}`;
+    labelSumOut.textContent = `$${Math.abs(withdrawals)}`;
+    labelSumIn.textContent = `$${incomes}`;
+}
+calcDisplaySummary(account1.movements);
+
 const createUsernames = function(accs) {
     accs.forEach(function(acc) {
         acc.username = acc.owner.toLowerCase().split(' ').map((name) => name[0]).join('');
@@ -206,11 +227,21 @@ createUsernames(accounts);
 // console.log(balance2);
 
 // Maximum value of the movements array using reduce
-const max = movements.reduce((acc, mov) => {
-   if(acc > mov) {
-       return acc;
-   }  else {
-       return mov;
-   }
-}, movements[0]);
-console.log(max);
+// const max = movements.reduce((acc, mov) => {
+//    if(acc > mov) {
+//        return acc;
+//    }  else {
+//        return mov;
+//    }
+// }, movements[0]);
+// console.log(max);
+
+// Chaining methods
+const eurToUsd = 1.1;
+const totalDepositsInUSD = movements
+    .filter(mov => mov > 0)
+    .map((mov, i, arr) => {
+    console.log(arr);
+    return mov * eurToUsd
+    }).reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositsInUSD);
