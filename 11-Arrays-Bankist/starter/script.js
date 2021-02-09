@@ -237,11 +237,20 @@ createUsernames(accounts);
 // console.log(max);
 
 // Chaining methods
-const eurToUsd = 1.1;
-const totalDepositsInUSD = movements
-    .filter(mov => mov > 0)
-    .map((mov, i, arr) => {
-    console.log(arr);
-    return mov * eurToUsd
-    }).reduce((acc, mov) => acc + mov, 0);
-console.log(totalDepositsInUSD);
+// const eurToUsd = 1.1;
+// const totalDepositsInUSD = movements
+//     .filter(mov => mov > 0)
+//     .map((mov, i, arr) => {
+//     console.log(arr);
+//     return mov * eurToUsd
+//     }).reduce((acc, mov) => acc + mov, 0);
+// console.log(totalDepositsInUSD);
+
+// Find method
+const first = movements.find(mov => mov < 0);
+console.log(movements);
+console.log(first);
+
+console.log(accounts);
+const account = accounts.find(acc => acc.owner === "Jessica Davis");
+console.log(account);
