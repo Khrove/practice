@@ -254,3 +254,6 @@ console.log(first);
 console.log(accounts);
 const account = accounts.find(acc => acc.owner === "Jessica Davis");
 console.log(account);
+
+
+// Bleep bloop im a robot
