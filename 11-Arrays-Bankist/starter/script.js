@@ -82,16 +82,16 @@ const calcDisplayBalance = movements => {
     labelBalance.textContent = `${balance} EUR`;
 }
 
-const calcDisplaySummary = function(movements) {
-    const incomes = movements
+const calcDisplaySummary = function(acc) {
+    const incomes = acc.movements
         .filter(mov => mov > 0)
         .reduce((acc, mov) => acc + mov, 0);
-    const withdrawals = movements
+    const withdrawals = acc.movements
         .filter(mov => mov < 0)
         .reduce((acc, mov) => acc + mov, 0);
-    const interest = movements
+    const interest = acc.movements
         .filter(mov => mov > 0)
-        .map(mov => mov * 1.2/100)
+        .map(mov => mov * acc.interestRate/100)
         .filter((interest, i, arr) => {
             console.log(arr);
             return interest >= 1;
@@ -120,7 +120,7 @@ btnLogin.addEventListener('click', function(e) {
 
     if(currentAccount?.pin === Number(inputLoginPin.value)) {
         // Display UI and message
-        labelWelcome.textContent = `Welcome back ${currentAccount.owner.split(' ')[0]}`;
+        labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
         containerApp.style.opacity = 100;
 
         // Clear input fields
@@ -134,7 +134,7 @@ btnLogin.addEventListener('click', function(e) {
         calcDisplayBalance(currentAccount.movements);
 
         // Display summary
-        calcDisplaySummary(currentAccount.movements);
+        calcDisplaySummary(currentAccount);
     }
 })
 
