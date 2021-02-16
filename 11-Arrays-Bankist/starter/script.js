@@ -76,13 +76,11 @@ const displayMovements = function(movements) {
         containerMovements.insertAdjacentHTML("afterbegin", html);
     });
 }
-displayMovements(account1.movements);
 
 const calcDisplayBalance = movements => {
     const balance = movements.reduce((acc, mov) => acc + mov, 0);
     labelBalance.textContent = `${balance} EUR`;
 }
-calcDisplayBalance(account1.movements);
 
 const calcDisplaySummary = function(movements) {
     const incomes = movements
@@ -103,7 +101,6 @@ const calcDisplaySummary = function(movements) {
     labelSumOut.textContent = `$${Math.abs(withdrawals)}`;
     labelSumIn.textContent = `$${incomes}`;
 }
-calcDisplaySummary(account1.movements);
 
 const createUsernames = function(accs) {
     accs.forEach(function(acc) {
@@ -111,6 +108,35 @@ const createUsernames = function(accs) {
     });
 }
 createUsernames(accounts);
+
+// Event Handlers
+let currentAccount;
+
+btnLogin.addEventListener('click', function(e) {
+    // Prevent form from submitting
+    e.preventDefault();
+
+    currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
+
+    if(currentAccount?.pin === Number(inputLoginPin.value)) {
+        // Display UI and message
+        labelWelcome.textContent = `Welcome back ${currentAccount.owner.split(' ')[0]}`;
+        containerApp.style.opacity = 100;
+
+        // Clear input fields
+        inputLoginUsername.value = inputLoginPin.value = '';
+        inputLoginPin.blur();
+
+        // Display movements
+        displayMovements(currentAccount.movements);
+
+        // Display balance
+        calcDisplayBalance(currentAccount.movements);
+
+        // Display summary
+        calcDisplaySummary(currentAccount.movements);
+    }
+})
 
 
 
@@ -247,14 +273,10 @@ createUsernames(accounts);
 // console.log(totalDepositsInUSD);
 
 // Find method
-const first = movements.find(mov => mov < 0);
-console.log(movements);
-console.log(first);
-
-console.log(accounts);
-const account = accounts.find(acc => acc.owner === "Jessica Davis");
-console.log(account);
-
-
-// Bleep bloop im a robot
-// bladsfasdfsadfasdfasdfasfasdf
+// const first = movements.find(mov => mov < 0);
+// console.log(movements);
+// console.log(first);
+//
+// console.log(accounts);
+// const account = accounts.find(acc => acc.owner === "Jessica Davis");
+// console.log(account);
