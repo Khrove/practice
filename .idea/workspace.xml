@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="997725a0-042d-475a-9763-1529de9719c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/11-Arrays-Bankist/starter/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/11-Arrays-Bankist/starter/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +71,8 @@
       <workItem from="1612872075978" duration="2996000" />
       <workItem from="1612960824160" duration="19000" />
       <workItem from="1613046399740" duration="1396000" />
-      <workItem from="1613476883118" duration="1818000" />
+      <workItem from="1613476883118" duration="2221000" />
+      <workItem from="1613563960546" duration="1105000" />
     </task>
     <servers />
   </component>
