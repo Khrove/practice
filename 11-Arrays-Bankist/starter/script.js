@@ -171,6 +171,9 @@ btnClose.addEventListener('click', e => {
         const index = accounts.findIndex(acc => acc.username === currentAccount.username);
         accounts.splice(index, 1);
     }
+
+    inputCloseUsername.value = inputClosePin.value = '';
+    containerApp.style.opacity = 0;
 })
 
 
