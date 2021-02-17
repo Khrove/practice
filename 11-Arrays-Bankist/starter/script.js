@@ -161,6 +161,18 @@ btnTransfer.addEventListener('click', function(e) {
    }
 });
 
+btnClose.addEventListener('click', e => {
+    e.preventDefault();
+
+    const user = inputCloseUsername.value;
+    const pin = Number(inputClosePin.value);
+
+    if(user === currentAccount.username && pin === currentAccount.pin) {
+        const index = accounts.findIndex(acc => acc.username === currentAccount.username);
+        accounts.splice(index, 1);
+    }
+})
+
 
 
 /////////////////////////////////////////////////
