@@ -151,8 +151,7 @@ btnTransfer.addEventListener('click', function(e) {
    // We need to convert the string input back to a number
    const amount = Number(inputTransferAmount.value);
    const to = accounts.find(acc => acc.username === inputTransferTo.value);
-
-   console.log(amount, to);
+   inputTransferAmount.value = inputTransferTo.value = '';
 
    if (amount > 0 && to && currentAccount.balance >= amount && to?.username !== currentAccount.username) {
        currentAccount.movements.push(-amount);
