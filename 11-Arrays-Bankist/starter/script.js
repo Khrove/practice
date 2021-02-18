@@ -334,17 +334,17 @@ btnClose.addEventListener('click', e => {
 // console.log(account);
 
 // SOME
-console.log(movements);
-
-// equality
-console.log(movements.includes(-130));
-
-// condition
-console.log(movements.some(mov => mov === -130));
-
-const anyDeposits = movements.some(mov => mov > 0);
-console.log(anyDeposits);
-
-// EVERY
-console.log(movements.every(mov => mov > 0));
-console.log(account4.movements.every(mov => mov > 0));
+// console.log(movements);
+//
+// // equality
+// console.log(movements.includes(-130));
+//
+// // condition
+// console.log(movements.some(mov => mov === -130));
+//
+// const anyDeposits = movements.some(mov => mov > 0);
+// console.log(anyDeposits);
+//
+// // EVERY
+// console.log(movements.every(mov => mov > 0));
+// console.log(account4.movements.every(mov => mov > 0));
