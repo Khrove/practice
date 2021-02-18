@@ -161,6 +161,20 @@ btnTransfer.addEventListener('click', function(e) {
    }
 });
 
+btnLoan.addEventListener('click', e => {
+    e.preventDefault();
+
+    const loan = Number(inputLoanAmount.value);
+
+    if(loan > 0 && currentAccount.movements.some(mov => mov >= loan * .1)) {
+        // Add movement
+        currentAccount.movements.push(loan);
+
+        // update UI
+        updateUI(currentAccount);
+    }
+});
+
 btnClose.addEventListener('click', e => {
     e.preventDefault();
 
@@ -318,3 +332,19 @@ btnClose.addEventListener('click', e => {
 // console.log(accounts);
 // const account = accounts.find(acc => acc.owner === "Jessica Davis");
 // console.log(account);
+
+// SOME
+console.log(movements);
+
+// equality
+console.log(movements.includes(-130));
+
+// condition
+console.log(movements.some(mov => mov === -130));
+
+const anyDeposits = movements.some(mov => mov > 0);
+console.log(anyDeposits);
+
+// EVERY
+console.log(movements.every(mov => mov > 0));
+console.log(account4.movements.every(mov => mov > 0));
