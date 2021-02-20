@@ -372,4 +372,4 @@ const overallBalanceflat = accounts
 console.log(overallBalanceflat);
 
 // flatMap
-const overallBala
+const overallBalance = 0;
