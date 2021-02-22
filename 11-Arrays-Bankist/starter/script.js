@@ -61,11 +61,13 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const displayMovements = function(movements) {
+const displayMovements = function(movements, sort = false) {
     // We use this to empty the placeholder movements (I deleted them)
     containerMovements.innerHTML = '';
 
-    movements.forEach(function(move, index) {
+    const sorted = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+    sorted.forEach(function(move, index) {
         const type = move > 0 ? "deposit" : "withdrawal";
         const html = `
             <div class="movements__row">
@@ -188,7 +190,15 @@ btnClose.addEventListener('click', e => {
 
     inputCloseUsername.value = inputClosePin.value = '';
     containerApp.style.opacity = 0;
-})
+});
+
+let sorted = false;
+btnSort.addEventListener('click', (e) => {
+   e.preventDefault();
+
+   displayMovements(currentAccount.movements, !sorted);
+   sorted = !sorted;
+});
 
 
 
@@ -351,25 +361,40 @@ btnClose.addEventListener('click', e => {
 
 // flat and Flatmap
 
-const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
-console.log(arr.flat());
+// const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+// console.log(arr.flat());
+//
+// const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+// console.log(arrDeep.flat(2));
+//
+// const accountMovements = accounts.map(acc => acc.movements);
+// console.log(accountMovements);
+// const allMovements = accountMovements.flat();
+// console.log(allMovements);
+// const overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+// console.log(overallBalance);
+//
+// // flat
+// const overallBalanceflat = accounts
+//     .map(acc => acc.movements)
+//     .flat()
+//     .reduce((acc, mov) => acc + mov, 0);
+// console.log(overallBalanceflat);
 
-const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
-console.log(arrDeep.flat(2));
+// Sorting Arrays
+// const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+// // Sorts A- Z and mutates the original array
+// console.log(owners.sort());
+//
+// // Numbers, get sorted from negative to positive, converts everything to strings then back to numbs
+// console.log(movements);
+//
+// // return < 0, A, B (keep order)
+// // return > 0 B, A (switch order)
+// // If you want descending then switch the above (-1 for top, 1 for bottom)
+// movements.sort((a, b) => {
+//     if(a > b) return 1;
+//     if(b > a) return -1;
+// });
 
-const accountMovements = accounts.map(acc => acc.movements);
-console.log(accountMovements);
-const allMovements = accountMovements.flat();
-console.log(allMovements);
-const overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
-console.log(overallBalance);
-
-// flat
-const overallBalanceflat = accounts
-    .map(acc => acc.movements)
-    .flat()
-    .reduce((acc, mov) => acc + mov, 0);
-console.log(overallBalanceflat);
-
-// flatMap
-const overallBalance = 0;
+console.log(movements);
