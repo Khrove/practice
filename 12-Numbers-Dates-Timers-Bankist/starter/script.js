@@ -253,3 +253,5 @@ btnSort.addEventListener('click', function (e) {
 // LECTURES
 
 console.log(23 === 23.0);
+// JS will convert the string 23 to a number because of type coersion
+console.log(+'23');
