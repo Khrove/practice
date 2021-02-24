@@ -252,26 +252,38 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 // LECTURES
 
-console.log(23 === 23.0);
-// JS will convert the string 23 to a number because of type coersion
-console.log(+'23');
+// console.log(23 === 23.0);
+// // JS will convert the string 23 to a number because of type coersion
+// console.log(+'23');
+//
+// // Conversion
+// console.log(Number('23'));
+// console.log(+'23');
+//
+// // Parsing
+// console.log(Number.parseInt('30px'));
+// console.log(Number.parseInt('e23'));
+// console.log(Number.parseInt('    2.5rem     '));
+//
+// // isNaN -- Check if value is not a number
+// console.log(Number.isNaN(20));
+// console.log(Number.isNaN('20'));
+// console.log(Number.isNaN(+'20X'));
+// console.log(Number.isNaN(23 / 0));
+//
+// // isFinite -- Checking if value is a number
+// console.log(Number.isFinite(20));
+// console.log(Number.isFinite('20'));
+// console.log(Number.isFinite(23/0));
 
-// Conversion
-console.log(Number('23'));
-console.log(+'23');
+// MATH AND ROUNDING
+console.log(Math.sqrt(25));
+console.log(25 ** (1 / 2));
+console.log(8 ** (1 / 3));
 
-// Parsing
-console.log(Number.parseInt('30px'));
-console.log(Number.parseInt('e23'));
-console.log(Number.parseInt('    2.5rem     '));
+console.log(Math.max(5, 18, 23, 11, 2));
+console.log(Math.max(5, 18, '23', 11, 2));
+console.log(Math.max(5, 18, '23px', 11, 2));
+console.log(Math.min(5, 18, 23, 11, 2));
 
-// isNaN -- Check if value is not a number
-console.log(Number.isNaN(20));
-console.log(Number.isNaN('20'));
-console.log(Number.isNaN(+'20X'));
-console.log(Number.isNaN(23 / 0));
-
-// isFinite -- Checking if value is a number
-console.log(Number.isFinite(20));
-console.log(Number.isFinite('20'));
-console.log(Number.isFinite(23/0));
+console.log(Math.PI * Number.parseFloat('10px') ** 2);
