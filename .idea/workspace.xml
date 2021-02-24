@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="997725a0-042d-475a-9763-1529de9719c3" name="Default Changelist" comment="" />
+    <list default="true" id="997725a0-042d-475a-9763-1529de9719c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12-Numbers-Dates-Timers-Bankist/starter/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/12-Numbers-Dates-Timers-Bankist/starter/script.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +80,7 @@
       <workItem from="1613862333149" duration="598000" />
       <workItem from="1613996340814" duration="2047000" />
       <workItem from="1614082681302" duration="1295000" />
-      <workItem from="1614168951168" duration="839000" />
+      <workItem from="1614168951168" duration="1454000" />
     </task>
     <servers />
   </component>
