@@ -255,3 +255,23 @@ btnSort.addEventListener('click', function (e) {
 console.log(23 === 23.0);
 // JS will convert the string 23 to a number because of type coersion
 console.log(+'23');
+
+// Conversion
+console.log(Number('23'));
+console.log(+'23');
+
+// Parsing
+console.log(Number.parseInt('30px'));
+console.log(Number.parseInt('e23'));
+console.log(Number.parseInt('    2.5rem     '));
+
+// isNaN -- Check if value is not a number
+console.log(Number.isNaN(20));
+console.log(Number.isNaN('20'));
+console.log(Number.isNaN(+'20X'));
+console.log(Number.isNaN(23 / 0));
+
+// isFinite -- Checking if value is a number
+console.log(Number.isFinite(20));
+console.log(Number.isFinite('20'));
+console.log(Number.isFinite(23/0));
