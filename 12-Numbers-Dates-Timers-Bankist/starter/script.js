@@ -151,6 +151,16 @@ const updateUI = function (acc) {
   calcDisplaySummary(acc);
 };
 
+labelBalance.addEventListener('click', function() {
+  [...document.querySelectorAll('.movements__row')].forEach((row, i) => {
+    if(i % 2 === 0) row.style.backgroundColor = 'orangered';
+    if(i % 3 === 0) row.style.backgroundColor = 'blue';
+  });
+
+})
+
+
+
 ///////////////////////////////////////
 // Event handlers
 let currentAccount;
@@ -306,3 +316,13 @@ btnSort.addEventListener('click', function (e) {
 // console.log(Math.floor('23.9'));
 // console.log((2.7).toFixed(0));
 // console.log((2.7).toFixed(3));
+
+// The Remainder operator -- top num / bottom num
+// console.log(5 % 2);
+// console.log(5 / 2); // 5 = 2 * 2 + 1
+// console.log(8 % 3);
+// console.log(6 % 2);
+//
+// const isEven = n => n % 2 === 0;
+// console.log(isEven(8));
+// console.log(isEven(23));
