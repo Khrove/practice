@@ -156,7 +156,6 @@ labelBalance.addEventListener('click', function() {
     if(i % 2 === 0) row.style.backgroundColor = 'orangered';
     if(i % 3 === 0) row.style.backgroundColor = 'blue';
   });
-
 })
 
 
@@ -326,3 +325,7 @@ btnSort.addEventListener('click', function (e) {
 // const isEven = n => n % 2 === 0;
 // console.log(isEven(8));
 // console.log(isEven(23));
+
+// BIGINT
+console.log( 2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
