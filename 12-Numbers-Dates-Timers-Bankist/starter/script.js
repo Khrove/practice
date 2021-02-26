@@ -366,3 +366,15 @@ btnSort.addEventListener('click', function (e) {
 // console.log(days1);
 
 // Internationalization with Dates
+
+// Timers: setTimeout and setInterval
+const ingredients = ['olives', 'spinach'];
+setTimeout((ing1, ing2) => {
+    console.log(`Here is your pizza with ${ing1} and ${ing2}!`);
+}, 3000, ...ingredients);
+
+// setInterval
+setInterval(() => {
+  const now = new Date();
+  console.log(now);
+}, 1000);
