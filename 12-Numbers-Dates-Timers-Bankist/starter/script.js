@@ -327,5 +327,31 @@ btnSort.addEventListener('click', function (e) {
 // console.log(isEven(23));
 
 // BIGINT
-console.log( 2 ** 53 - 1);
-console.log(Number.MAX_SAFE_INTEGER);
+// console.log( 2 ** 53 - 1);
+// console.log(Number.MAX_SAFE_INTEGER);
+
+// Dates in JS
+
+// Create a Date
+// const now = new Date();
+// console.log(now);
+//
+// console.log(new Date('Aug 02 2020 18:05:41'));
+//
+// console.log(new Date(account1.movementsDates[0]));
+// console.log(new Date(2037, 10, 19, 15, 23, 5));
+//
+// // Autocorrects
+// console.log(new Date(2037, 10, 31));
+//
+// console.log(new Date(0));
+//
+// // Conversion to milliseconds
+// console.log(new Date(3 * 24 * 60 * 60 * 1000));
+
+// Working with dates
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(future);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
