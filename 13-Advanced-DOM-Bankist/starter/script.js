@@ -48,3 +48,8 @@ message.innerHTML = 'We use cookies for improved functionality and analytics. <b
 
 header.prepend(message);
 
+// Delete elements
+document.querySelector('.btn--close-cookie').addEventListener('click', () => {
+  message.remove();
+});
+
