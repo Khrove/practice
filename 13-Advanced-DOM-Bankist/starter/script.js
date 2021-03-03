@@ -29,3 +29,14 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+// Selecting Elements
+// console.log(document.documentElement);
+//
+// document.querySelector('.header');
+const allSections = document.querySelectorAll('.section');
+const allButtons = document.getElementsByTagName('button');
+//
+// document.getElementsByClassName('btn');
+
+
