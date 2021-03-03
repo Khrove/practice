@@ -33,10 +33,18 @@ document.addEventListener('keydown', function (e) {
 // Selecting Elements
 // console.log(document.documentElement);
 //
-// document.querySelector('.header');
+const header = document.querySelector('.header');
 const allSections = document.querySelectorAll('.section');
 const allButtons = document.getElementsByTagName('button');
 //
 // document.getElementsByClassName('btn');
 
+// Creating and Inserting Elements
+// .insertAdjacentHTML (done previously)
+const message = document.createElement('div');
+message.classList.add('cookie-message');
+message.textContent = 'We use cookies for improved functionality and analytics.';
+message.innerHTML = 'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got It!</button>'
+
+header.prepend(message);
 
