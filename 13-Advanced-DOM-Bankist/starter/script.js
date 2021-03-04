@@ -64,3 +64,16 @@ console.log(getComputedStyle(message).height);
 
 document.documentElement.style.setProperty('--color-primary', 'orangered');
 
+// Attributes
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+console.log(logo.src);
+console.log(logo.className);
+
+// Non Standard
+console.log(logo.getAttribute('designer'));
+logo.setAttribute('company', 'Bankist');
+
+const link = document.querySelector('.nav__link--btn');
+console.log(link.href);
+
