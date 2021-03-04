@@ -53,3 +53,14 @@ document.querySelector('.btn--close-cookie').addEventListener('click', () => {
   message.remove();
 });
 
+// styles
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+
+message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 20 + 'px';
+console.log(getComputedStyle(message).height);
+
+document.documentElement.style.setProperty('--color-primary', 'orangered');
+
