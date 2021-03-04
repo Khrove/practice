@@ -77,3 +77,14 @@ logo.setAttribute('company', 'Bankist');
 const link = document.querySelector('.nav__link--btn');
 console.log(link.href);
 
+// data attributes
+console.log(logo.dataset.versionNumber);
+
+// Classes
+logo.classList.add('c');
+logo.classList.remove('c');
+logo.classList.toggle('c');
+logo.classList.contains('c');
+// logo.className = 'jonas';
+
+
