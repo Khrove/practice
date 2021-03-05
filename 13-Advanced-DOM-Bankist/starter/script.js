@@ -41,50 +41,64 @@ const allButtons = document.getElementsByTagName('button');
 
 // Creating and Inserting Elements
 // .insertAdjacentHTML (done previously)
-const message = document.createElement('div');
-message.classList.add('cookie-message');
-message.textContent = 'We use cookies for improved functionality and analytics.';
-message.innerHTML = 'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got It!</button>'
-
-header.prepend(message);
-
-// Delete elements
-document.querySelector('.btn--close-cookie').addEventListener('click', () => {
-  message.remove();
-});
-
-// styles
-message.style.backgroundColor = '#37383d';
-message.style.width = '120%';
-console.log(getComputedStyle(message).color);
-console.log(getComputedStyle(message).height);
-
-message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 20 + 'px';
-console.log(getComputedStyle(message).height);
-
-document.documentElement.style.setProperty('--color-primary', 'orangered');
-
-// Attributes
-const logo = document.querySelector('.nav__logo');
-console.log(logo.alt);
-console.log(logo.src);
-console.log(logo.className);
-
-// Non Standard
-console.log(logo.getAttribute('designer'));
-logo.setAttribute('company', 'Bankist');
-
-const link = document.querySelector('.nav__link--btn');
-console.log(link.href);
-
-// data attributes
-console.log(logo.dataset.versionNumber);
-
-// Classes
-logo.classList.add('c');
-logo.classList.remove('c');
-logo.classList.toggle('c');
-logo.classList.contains('c');
+// const message = document.createElement('div');
+// message.classList.add('cookie-message');
+// message.textContent = 'We use cookies for improved functionality and analytics.';
+// message.innerHTML = 'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got It!</button>'
+//
+// header.prepend(message);
+//
+// // Delete elements
+// document.querySelector('.btn--close-cookie').addEventListener('click', () => {
+//   message.remove();
+// });
+//
+// // styles
+// message.style.backgroundColor = '#37383d';
+// message.style.width = '120%';
+// console.log(getComputedStyle(message).color);
+// console.log(getComputedStyle(message).height);
+//
+// message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 20 + 'px';
+// console.log(getComputedStyle(message).height);
+//
+// document.documentElement.style.setProperty('--color-primary', 'orangered');
+//
+// // Attributes
+// const logo = document.querySelector('.nav__logo');
+// console.log(logo.alt);
+// console.log(logo.src);
+// console.log(logo.className);
+//
+// // Non Standard
+// console.log(logo.getAttribute('designer'));
+// logo.setAttribute('company', 'Bankist');
+//
+// const link = document.querySelector('.nav__link--btn');
+// console.log(link.href);
+//
+// // data attributes
+// console.log(logo.dataset.versionNumber);
+//
+// // Classes
+// logo.classList.add('c');
+// logo.classList.remove('c');
+// logo.classList.toggle('c');
+// logo.classList.contains('c');
 // logo.className = 'jonas';
+
+// Smooth Scrolling
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', (e) => {
+  const s1coordinates = section1.getBoundingClientRect();
+  console.log(s1coordinates);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log('Current scroll (X/Y)', window.pageXOffset, pageYOffset);
+});
 
 
