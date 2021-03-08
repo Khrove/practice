@@ -99,6 +99,19 @@ btnScrollTo.addEventListener('click', (e) => {
   console.log(e.target.getBoundingClientRect());
 
   console.log('Current scroll (X/Y)', window.pageXOffset, pageYOffset);
+
+  // Scrolling
+  // window.scrollTo(s1coordinates.left + window.pageXOffset, s1coordinates.top + window.pageYOffset);
+
+  // Smoothing the scrolling
+  // window.scrollTo({
+  //   left: s1coordinates.left + window.pageXOffset,
+  //   top: s1coordinates.top + window.pageYOffset,
+  //   behavior: 'smooth'
+  // });
+
+  // New way
+  section1.scrollIntoView({ behavior: 'smooth' })
 });
 
 
