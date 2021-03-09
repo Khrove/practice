@@ -128,3 +128,5 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // h1.onmouseenter = (e) => {
 //   alert('addEventListener: Great! You are reading the heading!');
 // }
+
+// Begin event propagation
